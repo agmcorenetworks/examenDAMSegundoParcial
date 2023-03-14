@@ -15,10 +15,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import es.corenetworks.dam.examenTema3.CajaFuerte;
-import es.corenetworks.dam.examenTema3.algoritmos.Algoritmos;
+import es.corenetworks.dam.examenTema3.algoritmos.FuerzaBruta;
 import es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException;
 import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;
 import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException;
+import es.corenetworks.dam.examenTema3.excepciones.MesNoValidoException;
 import es.corenetworks.dam.examenTema3.utilidades.Constantes;
 import es.corenetworks.dam.examenTema3.utilidades.Utilidades;
 
@@ -88,20 +89,26 @@ public class TestsJunit {
 	@Test
 	public void checkUtilidades_getMesDelAño() {
 
-		assertEquals(Utilidades.getMesDelAño(1), "enero", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(2), "febrero", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(3), "marzo", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(4), "abril", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(5), "mayo", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(6), "junio", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(7), "julio", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(8), "agosto", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(9), "septiembre", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(10), "octubre", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(11), "noviembre", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(12), "diciembre", "el mes no está bien");
-		assertEquals(Utilidades.getMesDelAño(0), "No es un mes valido", "el caso defult esta mal");
-		assertEquals(Utilidades.getMesDelAño(13), "No es un mes valido", "el caso defult esta mal");
+		try {
+			assertEquals(Utilidades.getMesDelAño(1), "enero", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(2), "febrero", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(3), "marzo", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(4), "abril", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(5), "mayo", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(6), "junio", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(7), "julio", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(8), "agosto", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(9), "septiembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(10), "octubre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(11), "noviembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(12), "diciembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelAño(0), "No es un mes valido", "el caso defult esta mal");
+			assertEquals(Utilidades.getMesDelAño(13), "No es un mes valido", "el caso defult esta mal");
+		} catch (MesNoValidoException e) {
+			assertEquals(e.getMessage(), "No es un mes valido", "el caso defult esta mal");
+
+		}
+		
 	}
 
 	@Test
@@ -350,15 +357,34 @@ public class TestsJunit {
 			CajaFuerte micaja;
 			try {
 				micaja = new CajaFuerte(7453);
-				assertEquals(clave,Algoritmos.fuerzaBruta(micaja));			
-				micaja = new CajaFuerte();
-				int claveDevuelta=Algoritmos.fuerzaBruta(micaja);
+				
+				FuerzaBruta FuerzaBruta=new FuerzaBruta(micaja);
+				
+				assertEquals(clave,FuerzaBruta.sacarCombinacion());
+				System.out.println("tiempo empleado en milisegundos: " + FuerzaBruta.getTiempo());
+				assertTrue(FuerzaBruta.getTiempo()>0);
+				
+				
+				CajaFuerte segundaCaja = new CajaFuerte(4345,4);
+				FuerzaBruta=new FuerzaBruta(segundaCaja);
+				assertEquals(clave,FuerzaBruta.sacarCombinacion());
+				System.out.println("tiempo empleado en milisegundos: " + FuerzaBruta.getTiempo());
+				assertTrue(FuerzaBruta.getTiempo()>0);
+				segundaCaja.abrirCajaFuertePorConsola();	
+				
+				CajaFuerte terceraCaja= new CajaFuerte();
+				FuerzaBruta=new FuerzaBruta(segundaCaja);
+				int claveDevuelta=FuerzaBruta.sacarCombinacion();
+				
 				assertTrue(claveDevuelta>1000 && claveDevuelta<9999);
 				assertEquals(claveDevuelta, micaja.getContrasenya());
 			} catch (InsuficientesDigitosException e) {
-				e.printStackTrace();
+				e.getMessage();
 			} catch (ExcesivosDigitosException e) {
-				e.printStackTrace();
+				e.getMessage();
+			} catch (DemasiadosIntentosException e) {
+				e.getMessage();
+
 			}
 	}
 }

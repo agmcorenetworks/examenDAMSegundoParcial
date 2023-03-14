@@ -5,9 +5,16 @@ import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;
 import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException;
 import es.corenetworks.dam.examenTema3.utilidades.Utilidades;
 
-public class Algoritmos {
+public class FuerzaBruta {
+	
+	private long tiempo;
+	private CajaFuerte cajaFuerte;
+	
+	public FuerzaBruta(CajaFuerte cajaFuerte) {
+		this.cajaFuerte=cajaFuerte;
+	}
 
-	public static int fuerzaBruta(CajaFuerte cajaFuerte) {
+	public int sacarCombinacion() {
 		System.out.println("Realizando fuerza bruta con contraseña");
 		int a = 1000;
 		boolean encontrado = false;
@@ -25,12 +32,17 @@ public class Algoritmos {
 			if (encontrado) {
 				clave=a;
 				fin = Utilidades.getTime();
+				tiempo=fin - inicio;
 				System.out.println("contraseña encontrada: " + a);
 				System.out.println("tiempo empleado en milisegundos: " + (fin - inicio));
 			}
 			a++;
 		}
 		return clave;
+	}
+	
+	public long getTiempo() {
+		return tiempo;
 	}
 
 }

@@ -1,5 +1,7 @@
 package es.corenetworks.dam.examenTema3.utilidades;
 
+import es.corenetworks.dam.examenTema3.excepciones.MesNoValidoException;
+
 public class Utilidades {
 
 	/**
@@ -22,8 +24,9 @@ public class Utilidades {
 	}
 
 	// ejercicios de switch
-	public static String getMesDelAño(int mes) {
+	public static String getMesDelAño(int mes) throws MesNoValidoException {
 		System.out.println(mes);
+		
 
 		String nombreMes = Constantes.NOMBRE_MES_NO_VALIDO;
 		switch (mes)
@@ -78,8 +81,7 @@ public class Utilidades {
 			break;
 
 		default:
-			nombreMes = Constantes.NOMBRE_MES_NO_VALIDO;
-			break;
+			throw new MesNoValidoException(Constantes.NOMBRE_MES_NO_VALIDO);			
 		}
 		return nombreMes;
 
