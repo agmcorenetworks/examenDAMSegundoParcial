@@ -10,14 +10,29 @@ El examen práctico de programación consistirá en el desarrollo de los problem
 
 * En el paquete es.corenetworks.dam.examenTema3.algoritmos crear la clase FuerzaBruta:
 
-(2 puntos)
-- Esta clase contendrá un objeto de la clase CajaFuerte que será inicializada en el constructor mediante un parametro, la clase solo debe contener un constructor, la clase además, tendrá un atributo tipo long para medir el tiempo que tarda el algoritmo en obtener la clave por defecto el valor de este atributo es 0.
+(1 puntos)
+- Esta clase contendrá tendrá un atributo llamado cajaFuerte de tipo CajaFuerte 
+- Esta clase contendrá tendrá un atributo llamado tiempo  de tipo long 
+
+
+(1 punto)
+La clase tendra un constructor que recibirá un parametro de tipo caja fuerte, que servirá para inicializar el atributo cajaFuerte, la clase solo debe contener un constructor, el constructor además debe inicializar el atributo tiempo a 0.
+
 
 (3 puntos)
-- contendrá un metodo sacarCombinacion que utiliza el atributo interno de la caja fuerte para sacar la combinación de la caja fuerte utilizando un bucle y el metodo checkearContrasenya de la caja fuerte, este metodo devolverá la combinación encontrada por el algoritmo, no se tendrá en cuenta el tiempo que tarda en encontrarse la contraseña.
+- crear el metodo sacarCombinacion que adivine la contraseña de la caja fuerte mediante un bucle enter 1000 y 9999 (ambos inclusive) en el cual se utilizará el atributo interno cajaFuerte para invocar al metodo checkearContrasenya de la caja fuerte, pasandole en cada iteración un numero.
+Este metodo devolverá la combinación encontrada por el algoritmo, no se tendrá en cuenta el tiempo que tarda en encontrarse la contraseña.
 
-(3 puntos)
-- Crear el metodo getTiempo que devuelve el tiempo obtenido en encontrar una contraseña. Para ello, modificar el metodo anterior para calcular el tiempo que tarda el algoritmo en encotrar la contraseña. Para hacer esto se utilizará el metodo getTime de la clase Utilidades que devuelve el tiempo transcurrido desde el 1 de enero de 1900 en milisegundos en milisegundos, una vez calculado el tiempo en el metodo anterior se debe guardar en el atributo tiempo. Un ejemplo del valor (bastante real) de este atributo podría ser 355 milisegundos.
+
+(1 puntos)
+- Modificar el metodo anterior incluyendo un atributo llamado inicio antes de que comience a buscarse la contraseña, que tome el valor dado por el metodo getTime de la clase utilidades (el metodo getTime devuelve en milisegundos el momento en el que se invoca)
+ Modificar el metodo anterior incluyendo un atributo llamado fin cuando la busqueda finalice o la contraseña se haya encontrado, que tome el valor dado por el metodo getTime de la clase utilidades (el metodo getTime devuelve en milisegundos el momento en el que se invoca)
+
+(1 puntos)
+- Utilizar las variables inicio y fin para calcular el tiempo usado por el algoritmo para encontrar la contraseña y guardar el valor en el atributo tiempo (el tiempo será la diferencia del inicio - el final,  Un ejemplo del valor (bastante real) de este atributo podría ser 355 milisegundos.)
+
+(1 puntos)
+- Crear el metodo getTiempo que devuelve el tiempo obtenido en encontrar una contraseña.
 
 (2 puntos)
 - Modificar la clase ExamenSegundoParcial del paquete es.corenetworks.dam.examenTema3, para usar el algoritmo de fuerza bruta y calcular el tiempo empleado en las distintas cajas fuertes 

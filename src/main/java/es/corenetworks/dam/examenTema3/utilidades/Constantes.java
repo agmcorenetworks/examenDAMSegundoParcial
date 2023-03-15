@@ -34,5 +34,7 @@ public class Constantes {
 	public static final int NUMERO_INTENTOS_CAJA = 4;
 	public static final String DIGITOS_INSUFICIENTES = "El numero de digitos es insuficiente";
 	public static final String DIGITOS_EXCESIVOS = "El numero de digitos es excesivo";
+	
+	public static final int[] numbers = {1, 2, 3, 6, 9, 10, 11, 16, 25, 28, 33, 75, 108};
 
 }

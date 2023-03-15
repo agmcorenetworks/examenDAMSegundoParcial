@@ -29,7 +29,7 @@ public class Parte3 {
 				assertTrue(FuerzaBruta.getTiempo()>0);
 				
 				
-				CajaFuerte segundaCaja = new CajaFuerte(4345,4);
+				CajaFuerte segundaCaja = new CajaFuerte(4345);
 				FuerzaBruta=new FuerzaBruta(segundaCaja);
 				assertEquals(4345,FuerzaBruta.sacarCombinacion());
 				System.out.println("tiempo empleado en milisegundos: " + FuerzaBruta.getTiempo());

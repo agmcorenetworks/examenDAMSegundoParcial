@@ -40,18 +40,6 @@ public class CajaFuerte {
 		}
 	}
 
-	public CajaFuerte(int contrasenya, int numeroIntentos)
-			throws InsuficientesDigitosException, ExcesivosDigitosException {
-		this.numeroIntentos = numeroIntentos;
-		if (contrasenya < 1000) {
-			throw new InsuficientesDigitosException(Constantes.DIGITOS_INSUFICIENTES);
-		} else if (contrasenya > 9999)
-			throw new ExcesivosDigitosException(Constantes.DIGITOS_EXCESIVOS);
-		else {
-			this.contrasenya = contrasenya;
-			leerTeclado = new Scanner(System.in);
-		}
-	}
 
 	public boolean checkearContrasenya(int paramContrasenya)
 			throws InsuficientesDigitosException, ExcesivosDigitosException {

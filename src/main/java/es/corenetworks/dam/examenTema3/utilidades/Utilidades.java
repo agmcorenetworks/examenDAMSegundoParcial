@@ -26,7 +26,6 @@ public class Utilidades {
 	// ejercicios de switch
 	public static String getMesDelAño(int mes) throws MesNoValidoException {
 		System.out.println(mes);
-		
 
 		String nombreMes = Constantes.NOMBRE_MES_NO_VALIDO;
 		switch (mes)
@@ -81,7 +80,7 @@ public class Utilidades {
 			break;
 
 		default:
-			throw new MesNoValidoException(Constantes.NOMBRE_MES_NO_VALIDO);			
+			throw new MesNoValidoException(Constantes.NOMBRE_MES_NO_VALIDO);
 		}
 		return nombreMes;
 
@@ -98,37 +97,55 @@ public class Utilidades {
 		case 1:
 		case 2:
 		case 3:
-			nombreTrimestre="primer trimestre";
+			nombreTrimestre = "primer trimestre";
 			break;
 		case 4:
 		case 5:
 		case 6:
-			nombreTrimestre="segundo trimestre";
+			nombreTrimestre = "segundo trimestre";
 			break;
 		case 7:
 		case 8:
 		case 9:
-			nombreTrimestre="tercer trimestre";
+			nombreTrimestre = "tercer trimestre";
 			break;
 		case 10:
 		case 11:
 		case 12:
-			nombreTrimestre="cuarto trimestre";
+			nombreTrimestre = "cuarto trimestre";
 			break;
 		default:
-			nombreTrimestre=Constantes.NOMBRE_MES_NO_VALIDO;
+			nombreTrimestre = Constantes.NOMBRE_MES_NO_VALIDO;
 			break;
 		}
 		return nombreTrimestre;
 	}
 
-	// Dado un número entero positivo, mostrar su factorial utilizando un bucle for.
-	// El factorial de un número se obtiene multiplicando todos los números enteros
-	// positivos que hay entre el 1 y ese número.
-	public static int factorial(int numero) {
-		int factorial = 1;
-		for (int x = 2; x <= numero; x++)
-			factorial = factorial * x;
-		return factorial;
+	public static void bucleWhile() {
+		System.out.println("bucle while");
+		int[] numbers = Constantes.numbers;
+		int index = 0;
+		while (index < numbers.length) {
+			if (numbers[index] % 2 == 0) {
+				System.out.println(numbers[index]);
+			}
+			index++;
+		}
+	}
+
+	
+	public static void bucleDoWhile() {
+		int[] numbers = Constantes.numbers;
+		int index = numbers.length - 1;
+		int suma=0;
+		while (index > 0) {
+			if (numbers[index] % 2 != 0) {
+				System.out.println(numbers[index]);
+				suma=suma+numbers[index];
+			}
+			index--;
+		}
+		System.out.println("suma: "+suma);
+
 	}
 }

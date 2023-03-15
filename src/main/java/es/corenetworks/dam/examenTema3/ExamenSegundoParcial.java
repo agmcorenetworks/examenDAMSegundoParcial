@@ -13,7 +13,7 @@ public class ExamenSegundoParcial {
 			FuerzaBruta FuerzaBruta=new FuerzaBruta(micaja);
 			FuerzaBruta.sacarCombinacion();
 			System.out.println("tiempo empleado en milisegundos: " + FuerzaBruta.getTiempo());
-			CajaFuerte segundaCaja = new CajaFuerte(4345,4);
+			CajaFuerte segundaCaja = new CajaFuerte(4345);
 			segundaCaja.abrirCajaFuertePorConsola();
 		} catch (DemasiadosIntentosException e) {
 			System.out.println("error: " + e.getMessage());
