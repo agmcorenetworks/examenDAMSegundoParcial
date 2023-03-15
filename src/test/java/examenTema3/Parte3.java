@@ -21,6 +21,7 @@ public class Parte3 {
 			CajaFuerte micaja;
 			try {
 				micaja = new CajaFuerte(7453);
+				assertTrue(clave==micaja.getContrasenya());
 				
 				FuerzaBruta FuerzaBruta=new FuerzaBruta(micaja);
 				

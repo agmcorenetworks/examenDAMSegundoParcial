@@ -119,12 +119,13 @@ public class Parte1 {
 
 	@Test
 	public void checkUtilidades_bucleWhile() {
-		Utilidades.bucleWhile();
+		assertTrue(6 == Utilidades.bucleWhile());
+
 	}
 	
 	@Test
 	public void checkUtilidades_bucleDoWhile() {
-		Utilidades.bucleDoWhile();
+		assertTrue(156 == Utilidades.bucleDoWhile());
 	}
 
 	@Test

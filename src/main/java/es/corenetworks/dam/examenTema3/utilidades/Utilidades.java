@@ -121,31 +121,33 @@ public class Utilidades {
 		return nombreTrimestre;
 	}
 
-	public static void bucleWhile() {
+	public static int bucleWhile() {
 		System.out.println("bucle while");
 		int[] numbers = Constantes.numbers;
 		int index = 0;
+		int contador=0;
 		while (index < numbers.length) {
 			if (numbers[index] % 2 == 0) {
 				System.out.println(numbers[index]);
+				contador++;
 			}
 			index++;
 		}
+		return contador;
 	}
 
-	
-	public static void bucleDoWhile() {
+	public static int bucleDoWhile() {
 		int[] numbers = Constantes.numbers;
 		int index = numbers.length - 1;
-		int suma=0;
+		int suma = 0;
 		while (index > 0) {
 			if (numbers[index] % 2 != 0) {
 				System.out.println(numbers[index]);
-				suma=suma+numbers[index];
+				suma = suma + numbers[index];
 			}
 			index--;
 		}
-		System.out.println("suma: "+suma);
-
+		System.out.println("suma: " + suma);
+		return suma;
 	}
 }
