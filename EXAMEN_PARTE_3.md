@@ -29,7 +29,7 @@ Este metodo devolverá la combinación encontrada por el algoritmo, no se tendr�
  Modificar el metodo anterior incluyendo un atributo llamado fin cuando la busqueda finalice o la contraseña se haya encontrado, que tome el valor dado por el metodo getTime de la clase utilidades (el metodo getTime devuelve en milisegundos el momento en el que se invoca)
 
 (1 puntos)
-- Utilizar las variables inicio y fin para calcular el tiempo usado por el algoritmo para encontrar la contraseña y guardar el valor en el atributo tiempo (el tiempo será la diferencia del inicio - el final,  Un ejemplo del valor (bastante real) de este atributo podría ser 355 milisegundos.)
+- Utilizar las variables inicio y fin para calcular el tiempo usado por el algoritmo para encontrar la contraseña y guardar el valor en el atributo tiempo (el tiempo será la diferencia de inicio - final,  Un ejemplo del valor (bastante real) de este atributo podría ser 355 milisegundos.)
 
 (1 puntos)
 - Crear el metodo getTiempo que devuelve el tiempo obtenido en encontrar una contraseña.
