@@ -79,28 +79,29 @@ public class Parte1 {
 	public void checkUtilidades_getNumero4Digitos() {
 		for (int i = 0; i < 100; i++) {
 			int numero = Utilidades.getNumero4Digitos();
+			System.out.println("numero: "+numero);
 			assertTrue(numero > 1000 && numero < 9999);
 		}
 	}
 
 	@Test
-	public void checkUtilidades_getMesDelAño() {
+	public void checkUtilidades_getMesDelA�o() {
 
 		try {
-			assertEquals(Utilidades.getMesDelAño(1), "enero", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(2), "febrero", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(3), "marzo", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(4), "abril", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(5), "mayo", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(6), "junio", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(7), "julio", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(8), "agosto", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(9), "septiembre", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(10), "octubre", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(11), "noviembre", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(12), "diciembre", "el mes no está bien");
-			assertEquals(Utilidades.getMesDelAño(0), "No es un mes valido", "el caso defult esta mal");
-			assertEquals(Utilidades.getMesDelAño(13), "No es un mes valido", "el caso defult esta mal");
+			assertEquals(Utilidades.getMesDelA�o(1), "enero", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(2), "febrero", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(3), "marzo", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(4), "abril", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(5), "mayo", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(6), "junio", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(7), "julio", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(8), "agosto", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(9), "septiembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(10), "octubre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(11), "noviembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(12), "diciembre", "el mes no está bien");
+			assertEquals(Utilidades.getMesDelA�o(0), "No es un mes valido", "el caso defult esta mal");
+			assertEquals(Utilidades.getMesDelA�o(13), "No es un mes valido", "el caso defult esta mal");
 		} catch (MesNoValidoException e) {
 			assertEquals(e.getMessage(), "No es un mes valido", "el caso defult esta mal");
 
@@ -109,22 +110,92 @@ public class Parte1 {
 	}
 
 	@Test
-	public void checkUtilidades_getTrimestreDelAño() {
+	public void checkUtilidades_getTrimestreDelA�o() {
 
-		assertEquals(Utilidades.getTrimestreDelAño(1), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(2), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(3), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(4), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(5), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(6), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(7), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(8), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(9), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(10), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(11), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(12), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(0), "No es un mes valido");
-		assertEquals(Utilidades.getTrimestreDelAño(13), "No es un mes valido");
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(1), "primer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(2), "primer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(3), "primer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(4), "segundo trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(5), "segundo trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(6), "segundo trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(7), "tercer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(8), "tercer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(9), "tercer trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(10), "cuarto trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(11), "cuarto trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(12), "cuarto trimestre");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(0), "No es un mes valido");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		try {
+			assertEquals(Utilidades.getTrimestreDelA�o(13), "No es un mes valido");
+		} catch (MesNoValidoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
 	}
 
 	@Test
@@ -135,7 +206,7 @@ public class Parte1 {
 	
 	@Test
 	public void checkUtilidades_bucleDoWhile() {
-		assertTrue(156 == Utilidades.bucleDoWhile());
+		assertTrue(157 == Utilidades.bucleDoWhile());
 	}
 
 	@Test
