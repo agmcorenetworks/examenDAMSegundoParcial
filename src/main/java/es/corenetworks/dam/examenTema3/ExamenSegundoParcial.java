@@ -16,16 +16,24 @@ public class ExamenSegundoParcial {
 
         
         System.out.println("Intentando abrir caja1 por consola...");
-        caja1.abrirCajaFuertePorConsola();
+        try {
+            caja1.abrirCajaFuertePorConsola();
+        } catch (DemasiadosIntentosException e) {
+            System.out.println(e.getMessage());
+        }
 
      
         Random rand = new Random();
         System.out.println("Intentando abrir caja1 con un bucle de 1000 iteraciones...");
         for (int i = 0; i < 1000; i++) {
             int randomNum = rand.nextInt(9000) + 1000;
-            if (caja1.checkearContrasenya(randomNum)) {
-                System.out.println("Caja1 abierta con la clave " + randomNum);
-                break;
+            try {
+            	if (caja1.checkearContrasenya(randomNum)) {
+                    System.out.println("Caja1 abierta con la clave " + randomNum);
+                    break;
+                }
+            }catch (InsuficientesDigitosException | ExcesivosDigitosException e) {
+                System.out.println(e.getMessage());
             }
         }
         
@@ -33,11 +41,15 @@ public class ExamenSegundoParcial {
         
         int claveCaja1 = caja1.getContrasenya();
         System.out.println("Intentando abrir caja1 con la clave obtenida...");
-        if (caja1.checkearContrasenya(claveCaja1)) {
-            System.out.println("Caja1 abierta con la clave " + claveCaja1);
-        } else {
-            System.out.println("No se pudo abrir caja1 con la clave " + claveCaja1);
-        }
+       try {
+    	   if (caja1.checkearContrasenya(claveCaja1)) {
+               System.out.println("Caja1 abierta con la clave " + claveCaja1);
+           } else {
+               System.out.println("No se pudo abrir caja1 con la clave " + claveCaja1);
+           }
+       }catch (InsuficientesDigitosException | ExcesivosDigitosException e) {
+           System.out.println(e.getMessage());
+       }
 
         
         int claveCaja2 = 1234;
@@ -46,7 +58,11 @@ public class ExamenSegundoParcial {
 
         
         System.out.println("Intentando abrir caja2 por consola...");
-        caja2.abrirCajaFuertePorConsola();
+        try {
+            caja2.abrirCajaFuertePorConsola();
+        } catch (DemasiadosIntentosException e) {
+            System.out.println(e.getMessage());
+        }
 
         
         System.out.println("Intentando abrir caja2 con claves incorrectas...");
@@ -72,5 +88,6 @@ public class ExamenSegundoParcial {
         System.out.println("Tiempo empleado en abrir caja2 con fuerza bruta: " + fbCaja2.getTiempo() + " ms");
         
     }
+    
 }
   
