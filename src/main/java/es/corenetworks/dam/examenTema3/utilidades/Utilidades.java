@@ -53,6 +53,7 @@ public class Utilidades {
 	    }
 	}
 	
+	// no he creado las constantes para los trimestres porque no lo pedía el enunciado
 	public static String getTrimestreDelAño(int mes) throws MesNoValidoException {
 	    switch(mes) {
 	        case Constantes.MES_ENERO:
