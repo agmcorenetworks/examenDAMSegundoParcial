@@ -11,6 +11,6 @@ public class Utilidades {
 	public static long getTime() {
 		return System.currentTimeMillis();
 	}
-
 	
 }
+/*comentario*/
