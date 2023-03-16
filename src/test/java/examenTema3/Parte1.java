@@ -111,6 +111,7 @@ public class Parte1 {
 	@Test
 	public void checkUtilidades_getTrimestreDelAño() {
 
+		// no he creado las constantes para los trimestres porque no lo pedía el enunciado
 		assertEquals(Utilidades.getTrimestreDelAño(1), "primer trimestre");
 		assertEquals(Utilidades.getTrimestreDelAño(2), "primer trimestre");
 		assertEquals(Utilidades.getTrimestreDelAño(3), "primer trimestre");
