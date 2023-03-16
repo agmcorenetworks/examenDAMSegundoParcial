@@ -62,9 +62,10 @@ public class CajaFuerte {
                 scanner.next();
                 intentosRestantes--;
             }
+            scanner.close();
         }
         throw new DemasiadosIntentosException("Demasiados intentos");
-    }
+    } 
 
     
     public int getContrasenya() {
