@@ -13,6 +13,16 @@ public class Parte1 {
 
 	// ---------------------------------------------------------
 	// tests de constantes
+	
+	
+	//Comentar los tests que esten fallando y no se quieran lanzar así:
+/*
+	@Test()
+	public void checkClassConstantes() throws ClassNotFoundException {
+		Class.forName("es.corenetworks.dam.examenTema3.utilidades.Constantes");
+	}
+*/
+	
 	@Test()
 	public void checkClassConstantes() throws ClassNotFoundException {
 		Class.forName("es.corenetworks.dam.examenTema3.utilidades.Constantes");
