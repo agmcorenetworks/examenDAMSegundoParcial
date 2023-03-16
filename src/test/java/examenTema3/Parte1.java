@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import es.corenetworks.dam.examenTema3.excepciones.MesNoValidoException;
-import es.corenetworks.dam.examenTema3.utilidades.Constantes;
 import es.corenetworks.dam.examenTema3.utilidades.Utilidades;
+import es.corenetworks.dam.examenTema3.utilidades.Constantes;
 
 public class Parte1 {
 
@@ -65,7 +65,7 @@ public class Parte1 {
 	@Test()
 	public void checkConstantesCajaFuerte() throws ClassNotFoundException {
 		assertTrue(Constantes.NUMERO_INTENTOS_CAJA == 4);
-		assertEquals(Constantes.DIGITOS_INSUFICIENTES, "El numero de digitos es insuficiente");
+		assertEquals(Constantes.DIGITOS_INSUFICIENTES, "El número de dígitos es insuficiente");
 		assertEquals(Constantes.DIGITOS_EXCESIVOS, "El numero de digitos es excesivo");
 	}
 
@@ -109,20 +109,20 @@ public class Parte1 {
 	}
 
 	@Test
-	public void checkUtilidades_getTrimestreDelAño() {
+	public void checkUtilidades_getTrimestreDelAño() throws MesNoValidoException {
 
-		assertEquals(Utilidades.getTrimestreDelAño(1), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(2), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(3), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(4), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(5), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(6), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(7), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(8), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(9), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(10), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(11), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(12), "cuarto trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(1), "Primer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(2), "Primer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(3), "Primer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(4), "Segundo trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(5), "Segundo trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(6), "Segundo trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(7), "Tercer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(8), "Tercer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(9), "Tercer trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(10), "Cuarto trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(11), "Cuarto trimestre");
+		assertEquals(Utilidades.getTrimestreDelAño(12), "Cuarto trimestre");
 		assertEquals(Utilidades.getTrimestreDelAño(0), "No es un mes valido");
 		assertEquals(Utilidades.getTrimestreDelAño(13), "No es un mes valido");
 	}
@@ -141,7 +141,7 @@ public class Parte1 {
 	@Test
 	public void test_checkExcepciones() throws ClassNotFoundException {
 		Class.forName("es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException");
-		Class.forName("es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException");
+		Class.forName("es.corenetworks.dam.examenTema3.excepciones.ExcesivoDigitosException");
 		Class.forName("es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException");
 	}
 

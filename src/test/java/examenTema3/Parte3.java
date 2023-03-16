@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 import es.corenetworks.dam.examenTema3.CajaFuerte;
 import es.corenetworks.dam.examenTema3.algoritmos.FuerzaBruta;
 import es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException;
-import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;
+import es.corenetworks.dam.examenTema3.excepciones.ExcesivoDigitosException;
+
 import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException;
 
 public class Parte3 {
@@ -52,7 +53,7 @@ public class Parte3 {
 				assertEquals(claveDevuelta, micaja.getContrasenya());
 			} catch (InsuficientesDigitosException e) {
 				e.getMessage();
-			} catch (ExcesivosDigitosException e) {
+			} catch (ExcesivoDigitosException e) {
 				e.getMessage();
 			} catch (DemasiadosIntentosException e) {
 				e.getMessage();

@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 
 import es.corenetworks.dam.examenTema3.CajaFuerte;
 import es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException;
-import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;
+import es.corenetworks.dam.examenTema3.excepciones.ExcesivoDigitosException;
 import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException;
 
 public class Parte2 {
@@ -153,7 +153,7 @@ public class Parte2 {
 			} catch (InsuficientesDigitosException e1) {
 
 				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
+			} catch (ExcesivoDigitosException e1) {
 				// TODO Auto-generated catch block
 				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
@@ -186,7 +186,7 @@ public class Parte2 {
 				assertTrue(test.checkearContrasenya(4444));
 			} catch (InsuficientesDigitosException e1) {
 				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
+			} catch (ExcesivoDigitosException e1) {
 				// TODO Auto-generated catch block
 				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
@@ -215,7 +215,7 @@ public class Parte2 {
 
 			} catch (InsuficientesDigitosException e1) {
 				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
+			} catch (ExcesivoDigitosException e1) {
 				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
 				System.out.println(e.getMessage());
