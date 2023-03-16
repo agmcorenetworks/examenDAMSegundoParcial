@@ -74,10 +74,37 @@ public class Utilidades {
 		
 		}
 	
-
-
-}
+	public static int bucleWhile() {
+	    int num_pares = 0;
+	    int i = 0;  
+	    while (i < Constantes.numbers.length) {
+	    	if (Constantes.numbers[i] % 2 == 0) {
+	            System.out.println("Numero par encontrado: " + Constantes.numbers[i]);
+	            num_pares += 1;
+	            i += 1;
+	    	}
+	    }
+	    return num_pares;
+	}
 	
+	public static int bucleDoWhile() {
+	    int indice = Constantes.numbers.length - 1;
+	    int sumaImpares = 0;
+	    do {
+	        int numero = Constantes.numbers[indice];
+	        if (numero % 2 != 0) {
+	            System.out.println(numero);
+	            sumaImpares += numero;
+	        }
+	        indice--;
+	    } while (indice >= 0);
+
+	    System.out.println("Suma de impares: " + sumaImpares);
+	    
+	    return sumaImpares;
+	}
+	
+}
 
 	
 
