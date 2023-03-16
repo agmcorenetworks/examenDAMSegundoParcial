@@ -23,7 +23,7 @@ public class Parte3 {
 */
 	
 	@Test
-	public void test_abrirCajaFuerte_fuerzaBruta() {		
+	public void test_abrirCajaFuerte_fuerzaBruta() throws ExcesivosDigitosException {		
 			int clave=7453;
 			CajaFuerte micaja;
 			try {
@@ -51,8 +51,6 @@ public class Parte3 {
 				assertTrue(claveDevuelta>1000 && claveDevuelta<9999);
 				assertEquals(claveDevuelta, micaja.getContrasenya());
 			} catch (InsuficientesDigitosException e) {
-				e.getMessage();
-			} catch (ExcesivosDigitosException e) {
 				e.getMessage();
 			} catch (DemasiadosIntentosException e) {
 				e.getMessage();

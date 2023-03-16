@@ -22,6 +22,7 @@ import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException
 public class Parte2 {
 	
 	
+	
 	//Comentar los tests que esten fallando y no se quieran lanzar así:
 /*
 	@Test()
@@ -137,7 +138,7 @@ public class Parte2 {
 		}
 
 		@Test
-		public void test_abrirCajaFuertePorConsola_1() throws UnsupportedEncodingException {
+		public void test_abrirCajaFuertePorConsola_1() throws UnsupportedEncodingException, ExcesivosDigitosException {
 			InputStream is = System.in;
 			PrintStream orig = System.out;
 
@@ -152,9 +153,6 @@ public class Parte2 {
 
 			} catch (InsuficientesDigitosException e1) {
 
-				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
-				// TODO Auto-generated catch block
 				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
 				// TODO Auto-generated catch block
@@ -171,7 +169,7 @@ public class Parte2 {
 		}
 
 		@Test
-		public void test_abrirCajaFuertePorConsola_2() throws UnsupportedEncodingException {
+		public void test_abrirCajaFuertePorConsola_2() throws UnsupportedEncodingException, ExcesivosDigitosException {
 			InputStream is = System.in;
 			PrintStream orig = System.out;
 
@@ -186,9 +184,6 @@ public class Parte2 {
 				assertTrue(test.checkearContrasenya(4444));
 			} catch (InsuficientesDigitosException e1) {
 				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
-				// TODO Auto-generated catch block
-				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());
@@ -200,7 +195,7 @@ public class Parte2 {
 		}
 
 		@Test
-		public void test_abrirCajaFuertePorConsola_excepcion_demasiados_intentos() throws UnsupportedEncodingException {
+		public void test_abrirCajaFuertePorConsola_excepcion_demasiados_intentos() throws UnsupportedEncodingException, ExcesivosDigitosException {
 			InputStream is = System.in;
 			PrintStream orig = System.out;
 
@@ -214,8 +209,6 @@ public class Parte2 {
 				test.abrirCajaFuertePorConsola();
 
 			} catch (InsuficientesDigitosException e1) {
-				System.out.println(e1.getMessage());
-			} catch (ExcesivosDigitosException e1) {
 				System.out.println(e1.getMessage());
 			} catch (DemasiadosIntentosException e) {
 				System.out.println(e.getMessage());

@@ -109,7 +109,7 @@ public class Parte1 {
 	}
 
 	@Test
-	public void checkUtilidades_getTrimestreDelAño() {
+	public void checkUtilidades_getTrimestreDelAño() throws MesNoValidoException {
 
 		assertEquals(Utilidades.getTrimestreDelAño(1), "primer trimestre");
 		assertEquals(Utilidades.getTrimestreDelAño(2), "primer trimestre");
