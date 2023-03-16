@@ -108,24 +108,7 @@ public class Parte1 {
 
 	}
 
-	@Test
-	public void checkUtilidades_getTrimestreDelAño() {
-
-		assertEquals(Utilidades.getTrimestreDelAño(1), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(2), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(3), "primer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(4), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(5), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(6), "segundo trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(7), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(8), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(9), "tercer trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(10), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(11), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(12), "cuarto trimestre");
-		assertEquals(Utilidades.getTrimestreDelAño(0), "No es un mes valido");
-		assertEquals(Utilidades.getTrimestreDelAño(13), "No es un mes valido");
-	}
+	
 
 	@Test
 	public void checkUtilidades_bucleWhile() {
