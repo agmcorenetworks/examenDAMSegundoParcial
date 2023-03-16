@@ -4,24 +4,20 @@ INSTRUCCIONES:
 
 El examen práctico de programación consistirá en el desarrollo de los problemas descritos en este documento
 
+Parte práctica 1  (10 puntos)
 
-
-# Parte 1 (10 puntos)
 
 (1 punto)
 - crear el paquete es.corenetworks.dam.examenTema3.excepciones
-
 - en el paquete es.corenetworks.dam.examenTema3.excepciones, crear las siguientes excepciones:
 	- DemasiadosIntentosException
 	- ExcesivosDigitosException
 	- InsuficientesDigitosException
-	- MesNoValidoException
-	
+	- MesNoValidoException	
 	
 (1 punto)	
 - en el paquete es.corenetworks.dam.examenTema3.utilidades crear la clase Constantes
 - dentro de la clase es.corenetworks.dam.examenTema3.utilidades.Constantes crear las siguientes constantes de tipo entero:
-
 	- MES_ENERO = 1;
 	- MES_FEBRERO = 2;
 	- MES_MARZO = 3;
@@ -49,31 +45,29 @@ El examen práctico de programación consistirá en el desarrollo de los problem
 	- NOMBRE_MES_NOVIEMBRE = "noviembre";
 	- NOMBRE_MES_DICIEMBRE = "diciembre";
 	- NOMBRE_MES_NO_VALIDO = "No es un mes valido";
-	- DIGITOS_INSUFICIENTES = "El numero de digitos es insuficiente";
-	- DIGITOS_EXCESIVOS = "El numero de digitos es excesivo";
+	- DIGITOS_INSUFICIENTES = "El número de dígitos es insuficiente";
+	- DIGITOS_EXCESIVOS = "El número de dígitos es excesivo";
 	
 - dentro de la clase es.corenetworks.dam.examenTema3.utilidades.Constantes crear la siguiente constante de tipo array de enteros:
-	- numbers = {1, 2, 3, 6, 9, 10, 11, 16, 25, 28, 33, 75, 108};
-	
-(8 puntos)
-- en la clase es.corenetworks.dam.examenTema3.utilidades.Utilidades crear los sguientes metodos
+	- numbers = {1, 2, 3, 6, 9, 10, 11, 16, 25, 28, 33, 75, 108};	
 
+
+- en la clase es.corenetworks.dam.examenTema3.utilidades.Utilidades crear los siguientes métodos:
 	(2 puntos)
-	- getNumero4Digitos, que devolverá un numero entero de 4 digitos entre 1000 y 9999
+	- getNumero4Digitos, que devolverá un número entero de 4 dígitos entre 1000 y 9999
 	
 	(2 puntos)
-	- getMesDelAño, que tomara como parametro un numero entero y delvolvera el nombre del mes correspondiente a ese numero, la comprobación se realizará utilizando las constantes y para devolver el nombre del mes tambien hay que usar las constantes creadas. en caso de recibir un numero que no corresponda a un mes del año se lanzará la excepción MesNoValidoException con el mensaje en la constante NOMBRE_MES_NO_VALIDO.
+	- getMesDelAño, que tomará como parámetro un número entero y devolverá el nombre del mes correspondiente a ese número, la comprobación se realizará utilizando las constantes y para devolver el nombre del mes también, usar las constantes creadas. En caso de recibir un número que no corresponda a un mes del año se lanzará la excepción MesNoValidoException con el mensaje en la constante NOMBRE_MES_NO_VALIDO.
 	suponemos que 1=enero, 2=febrero,..,12=diciembre
 	
 	(2 puntos)
-	- getTrimestreDelAño, que tomara como parametro un numero entero que representa un mes del año y delvolvera un String con el trimestre correspondiente a ese mes, la comprobación se realizará mediante una estructura switch, utilizando las constantes, para devolver el trimestre tambien hay que usar las constantes creadas. en caso de recibir un numero que no corresponda a un mes del año se lanzará la excepción MesNoValidoException con el mensaje en la constante NOMBRE_MES_NO_VALIDO.
-	suponemos que 1=enero, 2=febrero,...,12=diciembre, suponemos que el año esta dividido en 4 trimestres, primero, segundo, tercero y cuarto
+	- getTrimestreDelAño, que tomará como parámetro un número entero que representa un mes del año y devolverá un String con el trimestre correspondiente a ese mes, la comprobación se realizará mediante una estructura switch, utilizando las constantes, para devolver el trimestre también hay que usar las constantes creadas. En caso de recibir un número que no corresponda a un mes del año se lanzará la excepción MesNoValidoException con el mensaje en la constante NOMBRE_MES_NO_VALIDO.
+	suponemos que 1=enero, 2=febrero,...,12=diciembre, suponemos que el año está dividido en 4 trimestres, primero (enero, febrero, marzo), segundo(abril, mayo, junio), tercero (julio, agosto, septiembre) y cuarto (octubre, noviembre, diciembre)
 	
 	(1 puntos)
-	- bucleWhile, este metodo utilizara un bucle while para iterar sobre el array numbers definido como constante y mostrará por pantalla solamente los numeros pares, devolviendo el numero de elementos pares encontrados.
+	- bucleWhile, este método utilizará un bucle while para iterar sobre el array numbers definido como constante y mostrará por pantalla solamente los números pares, devolviendo el número de elementos pares encontrados.
 	
 	(1 puntos)
-	- bucleDoWhile, este metodo utilizara un bucle do-while para iterar sobre el array numbers definido como constante, recorrerá el array desde el final hacia atrás y mostrará por pantalla solamente los numeros impares así como la suma final de todos los numeros impares, el metodo devolverá esta suma que se ha calculado.
+	- bucleDoWhile, este método utilizará un bucle do-while para iterar sobre el array numbers definido como constante, recorrerá el array desde el final hacia atrás y mostrará por pantalla solamente los números impares así como la suma final de todos los números impares, el método devolverá esta suma que se ha calculado.
 
-	
-	
+
