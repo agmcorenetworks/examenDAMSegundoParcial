@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import es.corenetworks.dam.examenTema3.CajaFuerte;
+import es.corenetworks.dam.examenTema.CajaFuerte;
 import es.corenetworks.dam.examenTema3.algoritmos.FuerzaBruta;
 import es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException;
 import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;

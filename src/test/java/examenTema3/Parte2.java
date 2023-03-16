@@ -14,7 +14,7 @@ import java.io.UnsupportedEncodingException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import es.corenetworks.dam.examenTema3.CajaFuerte;
+import es.corenetworks.dam.examenTema.CajaFuerte;
 import es.corenetworks.dam.examenTema3.excepciones.DemasiadosIntentosException;
 import es.corenetworks.dam.examenTema3.excepciones.ExcesivosDigitosException;
 import es.corenetworks.dam.examenTema3.excepciones.InsuficientesDigitosException;
